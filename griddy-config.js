@@ -1,6 +1,6 @@
 exports.siteMetadata = {
-  title: `Griddy`,
-  description: `Gallery & Portfolio of artist`,
+  title: `程嵇邢滑の部落格`,
+  description: `A Place of No Significance `,
   author: `@mustofaa_id`,
   siteUrl: `https://griddy.netlify.com/`, // For SEO. Must have / at the end
   primaryColor: `#ffffff`,
@@ -9,33 +9,23 @@ exports.siteMetadata = {
   sitemap: `sitemap.xml`, // sitemap file name (required)
   socialLink: [
     {
-      name: 'Facebook',
-      href: 'https://link.mustofa.id/fb',
-      icon: 'facebook'
+      name: 'Github',
+      href: 'https://github.com/xingdl2007',
+      icon: 'github'
     },
     {
-      name: 'Twitter',
-      href: 'https://link.mustofa.id/fb',
-      icon: 'pinterest'
-    },
-    {
-      name: 'Artstation',
-      href: 'https://link.mustofa.id/fb',
-      icon: 'artstation'
-    },
-    {
-      name: 'Deviantart',
-      href: 'https://link.mustofa.id/fb',
-      icon: 'deviantart'
+      name: 'e-mail',
+      href: 'mailto:xingdl2007@gamil.com',
+      icon: 'mail'
     }
     // Social media available: facebook, instagram, twitter, artstation, behance, deviantart, dribbble
   ],
   menuHome: [
     // href should be match with file name in src/pages
-    { name: 'Gallery', href: '/gallery', icon: 'image' },
+    //{ name: 'Gallery', href: '/gallery', icon: 'image' },
     { name: 'Blog', href: '/blog', icon: 'book' },
-    { name: 'Friend', href: '/friend', icon: 'heart' },
-    { name: 'About', href: '/about', icon: 'user' }
+    //{ name: 'Friend', href: '/friend', icon: 'heart' },
+    //{ name: 'About', href: '/about', icon: 'user' }
   ],
   friends: [
     {

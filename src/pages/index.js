@@ -60,22 +60,25 @@ const IndexPage = ({ data }) => {
                   </div>
                   <div className='content has-content-padding'>
                     <p className='title is-5 is-post-detail'>
-                      What is Lorem Ipsum?
+                      Who ami I?
                     </p>
                     <p>
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                      I am a c++/golang/rust programmer in a starup focus on fintech especially low-latency network
+                      technology. Personally I'm interested in distributed systems, network, storage/file system, consensus and infrastructure.
+
                     </p>
                     <p className='title is-5 is-post-detail'
                       style={{ paddingTop: '1rem' }}>
-                      Why do we use it?
+                      Personal projects
                     </p>
                     <p>
-                      It is a long established fact that a reader will be distracted by the
-                      readable content of a page when looking at its layout.
-                      The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                      as opposed to using 'Content here, content here', making it look like readable English.
+                    <a href="https://github.com/xingdl2007/polly">Polly: A reactor-based C++ non-blocking network library inspired by muduo</a>
+                    <br/>  
+                    <a href="https://github.com/xingdl2007/6.824-2017">6.824: Distributed Systems (Spring 2017)</a>
+                    <br/>
+                    <a href="https://github.com/xingdl2007/6.828-2017">6.828: JOS: Operating Systems Engineering</a>
+                    <br/>
+                    <a href="https://github.com/xingdl2007/cmu15-445">CMU 15-445/645: Intro to Database Systems (Fall 2017)</a>
                     </p>
                     {/* put the social media icon here */}
                     <div className='buttons is-centered'>
