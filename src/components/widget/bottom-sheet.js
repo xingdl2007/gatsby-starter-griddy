@@ -24,9 +24,9 @@ const BottomSheet = ({ pageContext, title }) => {
       <div className='level-item'
         style={{ flexGrow: '0' }}>
         <IconButton
-          buttonClass={`is-light${next ? '' : ' is-static'}`}
-          to={next ? next.fields.slug : null}
-          text='Next'
+          buttonClass={`is-light${previous ? '' : ' is-static'}`}
+          to={previous ? previous.fields.slug : null}
+          text='Prev'
           icon='skip-back'
         />
       </div>
@@ -47,10 +47,10 @@ const BottomSheet = ({ pageContext, title }) => {
       <div className='level-item is-justify'
         style={{ flexGrow: '0' }}>
         <IconButton
-          buttonClass={`is-light${previous ? '' : ' is-static'}`}
-          to={previous ? previous.fields.slug : null}
+          buttonClass={`is-light${next ? '' : ' is-static'}`}
+          to={next ? next.fields.slug : null}
           rightIcon
-          text='Prev'
+          text='Next'
           icon='skip-forward'
         />
       </div>

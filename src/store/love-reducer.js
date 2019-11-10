@@ -1,9 +1,9 @@
-import axios from 'axios'
+// import axios from 'axios'
 import React from 'react'
 import { updatedObj } from '../shared/util'
 
-const API_URL = 'https://api.mustofa.id/v1/love' // TODO: Make your own API 😠
-const LS_LOVE_KEY = '0bUrD7c32P-wnqilz5Opn-griddy.netlify.com'
+// const API_URL = 'https://api.mustofa.id/v1/love' // TODO: Make your own API 😠
+// const LS_LOVE_KEY = '0bUrD7c32P-wnqilz5Opn-griddy.netlify.com'
 const act = {
   START: 'start',
   FETCH: 'fetch',
@@ -47,66 +47,66 @@ const loveReducer = (state, action) => {
 }
 
 const fetchLoves = (dispatch, postId) => {
-  dispatch({ type: act.START })
-  axios
-    .get(API_URL, { params: { postId } })
-    .then(res => {
-      if (res.status === 200) {
-        const { count } = res.data
-        dispatch({ type: act.FETCH, count })
-        if (count > 0) {
-          if (isLoved(postId)) {
-            dispatch({ type: act.LOVED })
-          }
-        }
-      }
-    })
-    .catch(error => {
-      if (error) {
-        dispatch({ type: act.ERROR, error: 'Something went wrong! 😓' })
-        dismiss(dispatch)
-      }
-    })
+  // dispatch({ type: act.START })
+  // axios
+  //   .get(API_URL, { params: { postId } })
+  //   .then(res => {
+  //     if (res.status === 200) {
+  //       const { count } = res.data
+  //       dispatch({ type: act.FETCH, count })
+  //       if (count > 0) {
+  //         if (isLoved(postId)) {
+  //           dispatch({ type: act.LOVED })
+  //         }
+  //       }
+  //     }
+  //   })
+  //   .catch(error => {
+  //     if (error) {
+  //       // dispatch({ type: act.ERROR, error: 'Something went wrong! 😓' })
+  //       dismiss(dispatch)
+  //     }
+  //   })
 }
 
 const postLove = (dispatch, love) => {
-  dispatch({ type: act.START })
-  axios
-    .post(API_URL, love)
-    .then(res => {
-      dispatch({ type: act.PUSH })
-      setLoves(love.postId)
-      dismiss(dispatch)
-    })
-    .catch(error => {
-      if (error) {
-        dispatch({ type: act.ERROR, error: 'Something went wrong! 😓' })
-        dismiss(dispatch)
-      }
-    })
+  // dispatch({ type: act.START })
+  // axios
+  //   .post(API_URL, love)
+  //   .then(res => {
+  //     dispatch({ type: act.PUSH })
+  //     setLoves(love.postId)
+  //     dismiss(dispatch)
+  //   })
+  //   .catch(error => {
+  //     if (error) {
+  //       dispatch({ type: act.ERROR, error: 'Something went wrong! 😓' })
+  //       dismiss(dispatch)
+  //     }
+  //   })
 }
 
-const setLoves = postId => {
-  if (typeof window !== 'undefined') {
-    const items = [...getLoves(), postId]
-    window.localStorage.setItem(LS_LOVE_KEY, JSON.stringify(items))
-  }
-}
+// const setLoves = postId => {
+//   if (typeof window !== 'undefined') {
+//     const items = [...getLoves(), postId]
+//     window.localStorage.setItem(LS_LOVE_KEY, JSON.stringify(items))
+//   }
+// }
 
-const getLoves = () => {
-  if (typeof window !== 'undefined') {
-    const items = window.localStorage.getItem(LS_LOVE_KEY)
-    return !items ? [] : JSON.parse(items)
-  }
-  return []
-}
+// const getLoves = () => {
+//   if (typeof window !== 'undefined') {
+//     const items = window.localStorage.getItem(LS_LOVE_KEY)
+//     return !items ? [] : JSON.parse(items)
+//   }
+//   return []
+// }
 
-const isLoved = postId => {
-  return getLoves().includes(postId)
-}
+// const isLoved = postId => {
+//   return getLoves().includes(postId)
+// }
 
-const dismiss = dispatch => {
-  setTimeout(() => dispatch({ type: act.CLEAR }), 2000)
-}
+// const dismiss = dispatch => {
+//   setTimeout(() => dispatch({ type: act.CLEAR }), 2000)
+// }
 
 export { LoveContext, loveReducer, initialState, fetchLoves, postLove }

@@ -1,6 +1,6 @@
 ---
 title: 技术路线的选择重要但不具有决定性
-date: 2019-11-10 21:24:06
+date: 2019-11-01 21:24:06
 tags:
 - guide
 category: repost

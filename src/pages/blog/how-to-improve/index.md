@@ -1,6 +1,6 @@
 ---
 title: "如何提升你的能力？给年轻程序猿的几条建议"
-date: 2019-11-10 21:32:41
+date: 2019-11-02 21:32:41
 tags:
 - guide
 category: repost
