@@ -44,7 +44,7 @@ DATE=`date '+%Y-%m-%d %H:%M:%S'`
 TARGET=$(echo $TITLE | tr -d -c '[:alnum:][:space:]')
 
 # Limit only 5 words
-TARGET=$(echo $TARGET | sed -r 's@^(\S+\s+\S+\s+\S+\s+\S+\s+\S+).*@\1@')
+TARGET=$(echo $TARGET | sed -E 's@^(\S+\s+\S+\s+\S+\s+\S+\s+\S+).*@\1@')
 
 # Convert title to folder name
 TARGET="${TARGET// /-}"
@@ -84,7 +84,7 @@ read -e -p "Do you wanna open the index.md file 🧐? [y/n]: " ANSWER
 if [[ ${ANSWER,,} =~ ^(y|yes|ya|ok)$ ]]; then
 	echo "🚀"
 	# Open index.md file with default makrdown editor in environment
-	xdg-open $TARGET/index.md
+	code $TARGET/index.md
 else
 	echo "😭"
 fi

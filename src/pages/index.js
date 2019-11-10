@@ -80,6 +80,23 @@ const IndexPage = ({ data }) => {
                     <br/>
                     <a href="https://github.com/xingdl2007/cmu15-445">CMU 15-445/645: Intro to Database Systems (Fall 2017)</a>
                     </p>
+                    <p className='title is-5 is-post-detail'
+                      style={{ paddingTop: '1rem' }}>
+                      Expert links
+                    </p>
+                    <p>
+                    <a href="https://swtch.com/~rsc/">Russ Cox: golang core member</a>
+                    <br/>  
+                    <a href="https://greensky00.github.io/">Jung-Sang Ahn: Software Engineer at eBay</a>
+                    <br/>
+                    <a href="https://rakyll.org/">rakyll: working on golang</a>
+                    <br/>
+                    <a href="http://yeasy.github.io/index.html">Baohua Yang: blockchain</a>
+                    <br/>
+                    <a href="https://colobu.com">smallnest: rpx/golang/scala</a>
+                    <br/>
+                    <a href="https://www.allthingsdistributed.com">Werner Vogels: CTO of Amazon.com</a>
+                    </p>
                     {/* put the social media icon here */}
                     <div className='buttons is-centered'>
                       {social.map((item, index) => (
